@@ -36,7 +36,3 @@ def getIndexName(userid,column):
 def addColumnToData(name):
     cur.execute(f"alter table data add {name} varchr(250)")
     con.commit()
-
-row = cur.execute("select dataset from data")
-row = row.fetchone()
-print(row[0])
